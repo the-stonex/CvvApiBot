@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel - CvvApiBot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>⚙️ Admin Panel</h1>
+    <p>Welcome, Admin ID: <b>{{ admin_id }}</b></p>
+
+    <div class="panel-actions">
+      <a href="{{ url_for('logout') }}" class="btn">🚪 Logout</a>
+    </div>
+
+    <div class="info">
+      <h3>📊 Panel Status</h3>
+      <ul>
+        <li>Bot Connected ✅</li>
+        <li>API Running ✅</li>
+        <li>Heroku Dyno Active ✅</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
