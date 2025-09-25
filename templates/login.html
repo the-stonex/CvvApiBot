@@ -1,1 +1,19 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login - CvvApiBot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🔑 Admin Login</h1>
+    <form method="POST">
+      <label for="admin_id">Enter Admin ID:</label>
+      <input type="number" name="admin_id" id="admin_id" placeholder="Your Telegram ID" required>
+      <button type="submit" class="btn">Login</button>
+    </form>
+    <p><a href="{{ url_for('home') }}">⬅ Back to Home</a></p>
+  </div>
+</body>
+</html>
