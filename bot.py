@@ -20,12 +20,20 @@ async def download(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
     url = context.args[0]
     try:
-        # Backend API call
         api_url = f"https://{HEROKU_APP_NAME}.herokuapp.com/download?url={url}"
-        resp = requests.get(api_url)
-        data = resp.json()  # JSON response
-        await update.message.reply_text(data.get("message", "No message received"))
-    except Exception as e:
+        resp = requests.get(api_url, timeout=10)
+
+        # JSON decode attempt
+        try:
+            data = resp.json()
+            message = data.get("message", "No message received")
+        except ValueError:
+            # Agar JSON nahi mila, raw text show karo
+            message = f"Received invalid response: {resp.text}"
+
+        await update.message.reply_text(message)
+
+    except requests.exceptions.RequestException as e:
         await update.message.reply_text(f"Error: {str(e)}")
 
 # Telegram bot setup
