@@ -6,7 +6,7 @@ import os
 # Bot token environment variable se lein
 BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 
-# Heroku app name (replace with your actual app name)
+# Heroku app name
 HEROKU_APP_NAME = "boiling-savannah-69748"  # <-- yahan apna Heroku app name dalen
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -23,7 +23,7 @@ async def download(update: Update, context: ContextTypes.DEFAULT_TYPE):
         # Backend API call
         api_url = f"https://{HEROKU_APP_NAME}.herokuapp.com/download?url={url}"
         resp = requests.get(api_url)
-        data = resp.json()
+        data = resp.json()  # JSON response
         await update.message.reply_text(data.get("message", "No message received"))
     except Exception as e:
         await update.message.reply_text(f"Error: {str(e)}")
