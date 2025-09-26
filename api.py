@@ -12,16 +12,12 @@ def download():
     if not url:
         return jsonify({"error": "No URL provided"}), 400
 
-    # Yahan apna real download/processing logic dalen
-    # Example: agar URL valid hai, simple message return karenge
-    try:
-        # Placeholder for actual processing, e.g., requests.get(url)
-        # yahan processing error handle karen
-        message = f"Processing URL: {url}"
-        return jsonify({"message": message})
-    except Exception as e:
-        return jsonify({"error": f"Failed to process URL: {str(e)}"}), 500
+    # Debug: print URL to Heroku logs
+    print("Received URL:", url)
+
+    # Yahan aap apna real download/processing logic daal sakte hain
+    # Filhal test response
+    return jsonify({"message": f"Processing {url}"})
 
 if __name__ == "__main__":
-    # Heroku par gunicorn se run karenge, debug=False production ke liye
-    app.run(debug=False, host='0.0.0.0', port=5000)
+    app.run(debug=True)
