@@ -16,7 +16,7 @@
 ## 🌟 Features
 - Unlimited Telegram Bot API  
 - Simple Admin Login Panel  
-- Flask based web dashboard  
+- Flask-based web dashboard  
 - One-click deploy to Heroku  
 
 ---
@@ -31,7 +31,7 @@
 
 ## ⚙️ Setup Instructions (Manual)
 
-1. Clone this repo:
+1. **Clone this repository**  
    ```bash
    git clone https://github.com/the-stonex/CvvApiBot.git
    cd CvvApiBot
