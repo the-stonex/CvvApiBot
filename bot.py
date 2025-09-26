@@ -2,7 +2,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 import requests
 
-BOT_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"  # यहाँ अपना बॉट टोकन डालें
+BOT_TOKEN = "8454018672:AAEBu9S-bOU_dARB7O7FrT7eezJYKJBwL5g"  # यहाँ अपना बॉट टोकन डालें
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Hello! I am CvvApiBot. Use /download <URL> to process.")
