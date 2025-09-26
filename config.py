@@ -1,7 +1,7 @@
 # config.py
 
 # 👉 यहाँ अपना Telegram Bot Token डालें
-BOT_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
+BOT_TOKEN = "8454018672:AAEBu9S-bOU_dARB7O7FrT7eezJYKJBwL5g"
 
 # 👉 अगर आप multiple admins रखना चाहते हैं तो उनकी Telegram IDs list में डालें
 ADMINS = [123456789, 987654321]
