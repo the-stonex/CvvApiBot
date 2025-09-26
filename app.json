@@ -1,0 +1,26 @@
+{
+  "name": "CvvApiBot",
+  "description": "Telegram Bot + Unlimited API + Admin Panel",
+  "repository": "https://github.com/the-stonex/CvvApiBot",
+  "logo": "https://raw.githubusercontent.com/the-stonex/CvvApiBot/main/custom_logo.png",
+  "keywords": ["python", "flask", "telegram", "bot"],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your Telegram Bot Token from @BotFather",
+      "required": true
+    },
+    "ADMIN_USERNAME": {
+      "description": "Admin username for login panel",
+      "required": true
+    },
+    "ADMIN_PASSWORD": {
+      "description": "Admin password for login panel",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
